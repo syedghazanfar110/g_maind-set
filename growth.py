@@ -77,7 +77,8 @@ if uploaded_files:
         mime_type = "text/csv"
 
     elif conversion_type == "Exel":
-        df.to_excel(buffer, index=False)        file_name = file.name.replace(file_ext, "xlsx")
+        df.to_excel(buffer, index=False)        
+        file_name = file.name.replace(file_ext, "xlsx")
         mime_type = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
     buffer.seek(0)
 
